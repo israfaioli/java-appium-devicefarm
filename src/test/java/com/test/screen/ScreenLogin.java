@@ -8,31 +8,31 @@ public class ScreenLogin extends BaseScreen {
 
     @AndroidFindBy(id = "login_username")
     @iOSFindBy(accessibility = "login_username")
-    private RemoteWebElement campoEmail;
+    private RemoteWebElement fieldEmail;
 
     @AndroidFindBy(id = "login_password")
     @iOSFindBy(accessibility = "login_password")
-    private RemoteWebElement campoSenha;
+    private RemoteWebElement fieldPassword;
 
     @AndroidFindBy(id = "login_button")
     @iOSFindBy(accessibility = "login_button")
-    private RemoteWebElement botaoContinuar;
+    private RemoteWebElement buttonContinue;
 
-    public void escreverEmail(String email) {
-        campoEmail.sendKeys(email);
+    public void writeEmail(String email) {
+        fieldEmail.sendKeys(email);
     }
 
-    public void escreverSenha(String senha) {
-        campoSenha.sendKeys(senha);
+    public void writePassword(String senha) {
+        fieldPassword.sendKeys(senha);
     }
 
-    public void clicarBotaoContinuar() {
-        botaoContinuar.click();
+    public void clickContinueButton() {
+        buttonContinue.click();
     }
 
-    public void realizarLogin(String email, String senha) {
-        escreverEmail(email);
-        escreverSenha(senha);
-        clicarBotaoContinuar();
+    public void login(String email, String senha) {
+        writeEmail(email);
+        writePassword(senha);
+        clickContinueButton();
     }
 }

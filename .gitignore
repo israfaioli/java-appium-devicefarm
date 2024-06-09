@@ -26,5 +26,5 @@ hs_err_pid*
 .idea/
 
 # nao adicionar pasta com resultado target
-target/
+#target/
 

@@ -46,6 +46,16 @@ mvn test -Dexecucao=local -Ddispositivo=ios
 mvn test -Dexecucao=devicefarm -Ddispositivo=ios
 ```
 
+## 🤖 Gerar relatório de report
+
+* Acessa a pasta do projeto
+* Acesse o diretório tests:
+* Executar a geração do relatório do cluecumber
+
+```
+mvn cluecumber-report:reporting
+```
+
 <hr>
 Caro recrutador caso sinta interesse em ver outros projetos de meu portifólio acessar a url abaixo: 
 - https://github.com/israfaioli

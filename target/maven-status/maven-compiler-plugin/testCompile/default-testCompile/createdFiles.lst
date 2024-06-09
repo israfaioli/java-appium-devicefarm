@@ -1,0 +1,6 @@
+com\test\RunTest.class
+com\test\screen\BaseScreen.class
+com\test\screen\ScreenLogin.class
+com\test\screen\Utils.class
+com\test\steps\LoginSteps.class
+com\test\Hooks.class

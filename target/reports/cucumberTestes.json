@@ -1,0 +1,168 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#language: pt"
+      }
+    ],
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 18449210900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.startProject()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "login com sucesso",
+        "description": "",
+        "id": "login;login-com-sucesso",
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 570681400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "que eu informe informe usuário \"qazando@gmail.com\" e senha \"1234\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "qazando@gmail.com",
+                  "offset": 32
+                },
+                {
+                  "val": "1234",
+                  "offset": 60
+                }
+              ],
+              "location": "LoginSteps.que_eu_informe_informe_usuário_e_senha(String,String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 602882400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "eu clicar no botão logar",
+            "match": {
+              "location": "LoginSteps.eu_clicar_no_botão_logar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 28200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "vou visualizar a home do aplicativo",
+            "match": {
+              "location": "LoginSteps.vou_visualizar_a_home_do_aplicativo()"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "line": 5,
+            "name": "@test"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2438718800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.startProject()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Login com sucesso utilizando tabela",
+        "description": "",
+        "id": "login;login-com-sucesso-utilizando-tabela;;2",
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 1104273900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "que eu informe informe usuário \"qazando@gmail.com\" e senha \"1234\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "qazando@gmail.com",
+                  "offset": 32
+                },
+                {
+                  "val": "1234",
+                  "offset": 60
+                }
+              ],
+              "location": "LoginSteps.que_eu_informe_informe_usuário_e_senha(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 585988600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "eu clicar no botão logar",
+            "match": {
+              "location": "LoginSteps.eu_clicar_no_botão_logar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 22900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "vou visualizar a home do aplicativo",
+            "match": {
+              "location": "LoginSteps.vou_visualizar_a_home_do_aplicativo()"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "line": 11,
+            "name": "@regression"
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "",
+    "id": "login",
+    "keyword": "Funcionalidade",
+    "uri": "login.feature"
+  }
+]
