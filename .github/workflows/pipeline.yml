@@ -33,4 +33,4 @@ jobs:
         run: mvn install -DskipTests
 
       - name: Run tests
-        run: mvn test -Dexecucao=local -Ddispositivo=android
+        run: mvn test -Dexecucao=devicefarm -Ddispositivo=android
