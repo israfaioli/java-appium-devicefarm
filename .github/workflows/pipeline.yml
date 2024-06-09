@@ -39,3 +39,9 @@ jobs:
 
       - name: Generate report
         run: mvn cluecumber-report:reporting
+
+      - name: Upload test report artifact
+        uses: actions/upload-artifact@v3
+        with:
+            name: test-report
+            path: target/formated-report
