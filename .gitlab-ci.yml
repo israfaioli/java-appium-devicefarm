@@ -30,6 +30,7 @@ upload-report-job:       # This job runs in the build stage, which runs first.
   stage: upload
   dependencies:
     - test-job
+    - report-job
   script:
     - echo "Generating artifact..."
     - mvn cluecumber-report:reporting
