@@ -7,12 +7,13 @@ stages:          # List of stages for jobs, and their order of execution
 
 variables:
   BROWSERSTACK_KEY: ${{ secrets.BROWSERSTACK_KEY }}
+  DEVICE: "android"  # Valor padrão, pode ser sobrescrito
 
 test-job:       # This job runs in the build stage, which runs first.
   stage: test
   script:
     - export BROWSERSTACK_KEY=${BROWSERSTACK_KEY}
-    - mvn test -Dexecucao=devicefarm -Ddispositivo=android
+    - mvn test -Dexecucao=devicefarm -Ddispositivo=${DEVICE}
   artifacts:
     paths:
       - target/formated-report
@@ -24,6 +25,7 @@ report-job:       # This job runs in the build stage, which runs first.
   script:
     - echo "Uploading artifact..."
     -
+
 upload-report-job:       # This job runs in the build stage, which runs first.
   stage: upload
   dependencies:
