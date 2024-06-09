@@ -1,4 +1,4 @@
-name: Run Appium Tests on Android
+name: Run Appium Tests
 
 on:
   push:
