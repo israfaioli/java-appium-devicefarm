@@ -2,20 +2,21 @@ package com.test.screen;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import io.appium.java_client.pagefactory.iOSXCUITBy;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 public class ScreenLogin extends BaseScreen {
 
     @AndroidFindBy(id = "login_username")
-    @iOSFindBy(accessibility = "login_username")
+    @iOSXCUITBy(accessibility = "login_username")
     private RemoteWebElement fieldEmail;
 
     @AndroidFindBy(id = "login_password")
-    @iOSFindBy(accessibility = "login_password")
+    @iOSXCUITBy(accessibility = "login_password")
     private RemoteWebElement fieldPassword;
 
     @AndroidFindBy(id = "login_button")
-    @iOSFindBy(accessibility = "login_button")
+    @iOSXCUITBy(accessibility = "login_button")
     private RemoteWebElement buttonContinue;
 
     public void writeEmail(String email) {
