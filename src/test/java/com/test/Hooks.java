@@ -46,7 +46,7 @@ public class Hooks {
         } else if (execution.equals("devicefarm") && device.equals("ios")) {
             System.out.println("iOS DEVICEFARM");
             desiredCapabilities.setCapability("browserstack.user", "israelfaiolipint_OY3o57");
-            desiredCapabilities.setCapability("browserstack.key", "N5vYzsVZCrLx7xqNhmdi");
+            desiredCapabilities.setCapability("browserstack.key", browserstackKey);
             desiredCapabilities.setCapability("app", "bs://url_browserstack");
             desiredCapabilities.setCapability("deviceName", "iPhone 13");
             desiredCapabilities.setCapability("os_version", "16");
