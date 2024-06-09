@@ -7,6 +7,13 @@ on:
   pull_request:
     branches:
       - master
+  workflow_dispatch:
+    inputs:
+      device:
+        description: 'Device platform to run tests on'
+        required: true
+        default: 'android'
+        type: string
 
 jobs:
   test:
@@ -35,7 +42,7 @@ jobs:
       - name: Run tests
         env:
           BROWSERSTACK_KEY: ${{ secrets.BROWSERSTACK_KEY }}
-        run: mvn test -Dexecucao=devicefarm -Ddispositivo=android
+        run: mvn test -Dexecucao=devicefarm -Ddispositivo=${{ github.event.inputs.device }}
 
       - name: Generate report
         run: mvn cluecumber-report:reporting
