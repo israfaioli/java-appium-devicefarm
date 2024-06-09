@@ -33,4 +33,6 @@ jobs:
         run: mvn install -DskipTests
 
       - name: Run tests
+        env:
+          BROWSERSTACK_KEY: ${{ secrets.BROWSERSTACK_KEY }}
         run: mvn test -Dexecucao=devicefarm -Ddispositivo=android

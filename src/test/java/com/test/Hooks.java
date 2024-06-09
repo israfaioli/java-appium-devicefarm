@@ -12,6 +12,7 @@ public class Hooks {
     private static AppiumDriver<?> driver;
     public static String execution = "";
     public static String device = "";
+    public static String browserstackKey = System.getenv("BROWSERSTACK_KEY");
 
 
     public static AppiumDriver<?> validateDriver() throws MalformedURLException {
@@ -37,7 +38,7 @@ public class Hooks {
         } else if (execution.equals("devicefarm") && device.equals("android")) {
             System.out.println("ANDROID DEVICEFARM");
             desiredCapabilities.setCapability("browserstack.user", "israelfaiolipint_OY3o57");
-            desiredCapabilities.setCapability("browserstack.key", "N5vYzsVZCrLx7xqNhmdi");
+            desiredCapabilities.setCapability("browserstack.key", browserstackKey);
             desiredCapabilities.setCapability("app", "bs://857cc0a6cb90401473c404ff1e3a52512172916b");
             desiredCapabilities.setCapability("device", "Google Pixel 3");
             desiredCapabilities.setCapability("os_version", "9.0");
