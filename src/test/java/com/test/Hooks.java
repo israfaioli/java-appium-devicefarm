@@ -6,6 +6,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class Hooks {
@@ -26,7 +27,8 @@ public class Hooks {
             desiredCapabilities.setCapability("deviceName", "emulator-5554");
             desiredCapabilities.setCapability("platformaName", "Android");
             desiredCapabilities.setCapability("unicodeKeyboard", true);
-            driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), desiredCapabilities);
+            driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), desiredCapabilities);
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         } else if (execution.equals("local") && device.equals("ios")) {
             System.out.println("iOS LOCAL");
             desiredCapabilities.setCapability("app", "C:\\projetos\\java-appium-devicefarm\\apps\\LoginExample.app");
@@ -34,7 +36,10 @@ public class Hooks {
             desiredCapabilities.setCapability("platformaName", "iOS");
             desiredCapabilities.setCapability("platformaVersion", "15.0");
             desiredCapabilities.setCapability("automationName", "XCUITest");
-            driver = new IOSDriver(new URL("http://localhost:4723/wd/hub"), desiredCapabilities);
+            desiredCapabilities.setCapability("unicodeKeyboard", true);
+            desiredCapabilities.setCapability("resetKeyboard", true);
+            driver = new IOSDriver<>(new URL("http://localhost:4723/wd/hub"), desiredCapabilities);
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         } else if (execution.equals("devicefarm") && device.equals("android")) {
             System.out.println("ANDROID DEVICEFARM");
             desiredCapabilities.setCapability("browserstack.user", "israelfaiolipint_OY3o57");
@@ -43,6 +48,7 @@ public class Hooks {
             desiredCapabilities.setCapability("device", "Google Pixel 3");
             desiredCapabilities.setCapability("os_version", "9.0");
             driver = new AndroidDriver<>(new URL("http://hub.browserstack.com/wd/hub"), desiredCapabilities);
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         } else if (execution.equals("devicefarm") && device.equals("ios")) {
             System.out.println("iOS DEVICEFARM");
             desiredCapabilities.setCapability("browserstack.user", "israelfaiolipint_OY3o57");
@@ -50,7 +56,10 @@ public class Hooks {
             desiredCapabilities.setCapability("app", "bs://url_browserstack");
             desiredCapabilities.setCapability("deviceName", "iPhone 13");
             desiredCapabilities.setCapability("os_version", "16");
+            desiredCapabilities.setCapability("unicodeKeyboard", true);
+            desiredCapabilities.setCapability("resetKeyboard", true);
             driver = new IOSDriver<>(new URL("http://hub.browserstack.com/wd/hub"), desiredCapabilities);
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         }
 
         return driver;

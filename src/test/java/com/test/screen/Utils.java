@@ -9,6 +9,7 @@ import org.openqa.selenium.remote.RemoteWebElement;
 import static com.test.Hooks.getDriver;
 
 public class Utils {
+    public static String device = "";
 
     public void validateText(RemoteWebElement element, String text) {
         String expectedText = element.getText();
@@ -29,5 +30,15 @@ public class Utils {
         scrollObjects.put("element", element);
         scrollObjects.put("direction", "up");
         Hooks.getDriver().executeScript("mobile: swipe", scrollObjects);
+    }
+
+    public void scroll(String text, RemoteWebElement element) {
+        device = System.getProperty("dispositivo").toLowerCase();
+
+        if(device.equals("android")) {
+            scrollToText(text);
+        } else {
+            scrollToElementIos(element);
+        }
     }
 }
