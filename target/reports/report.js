@@ -13,7 +13,7 @@ formatter.feature({
   "keyword": "Funcionalidade"
 });
 formatter.before({
-  "duration": 18449210900,
+  "duration": 28096145100,
   "status": "passed"
 });
 formatter.scenario({
@@ -59,21 +59,21 @@ formatter.match({
   "location": "LoginSteps.que_eu_informe_informe_usuário_e_senha(String,String)"
 });
 formatter.result({
-  "duration": 570681400,
+  "duration": 1730068800,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.eu_clicar_no_botão_logar()"
 });
 formatter.result({
-  "duration": 602882400,
+  "duration": 1039233400,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.vou_visualizar_a_home_do_aplicativo()"
 });
 formatter.result({
-  "duration": 28200,
+  "duration": 41600,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -131,7 +131,7 @@ formatter.examples({
   "keyword": "Exemplos"
 });
 formatter.before({
-  "duration": 2438718800,
+  "duration": 1212921100,
   "status": "passed"
 });
 formatter.scenario({
@@ -181,21 +181,21 @@ formatter.match({
   "location": "LoginSteps.que_eu_informe_informe_usuário_e_senha(String,String)"
 });
 formatter.result({
-  "duration": 1104273900,
+  "duration": 1559100500,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.eu_clicar_no_botão_logar()"
 });
 formatter.result({
-  "duration": 585988600,
+  "duration": 1421818800,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.vou_visualizar_a_home_do_aplicativo()"
 });
 formatter.result({
-  "duration": 22900,
+  "duration": 11800,
   "status": "passed"
 });
 });

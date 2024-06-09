@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="com.test.RunTest" time="0.003" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="com.test.RunTest" time="0.007" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.10+8-LTS-162"/>
@@ -45,7 +45,7 @@
     <property name="java.class.path" value="C:\Program Files\apache-maven-3.6.3\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dexecucao=local -Ddispositivo=android"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dexecucao=devicefarm -Ddispositivo=android"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-11.0.10"/>
     <property name="user.language" value="pt"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -63,14 +63,14 @@
     <property name="java.vendor.version" value="18.9"/>
     <property name="dispositivo" value="android"/>
     <property name="sun.stdout.encoding" value="cp850"/>
-    <property name="execucao" value="local"/>
+    <property name="execucao" value="devicefarm"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Cenario: login com sucesso" name="Dado que eu informe informe usuário &quot;qazando@gmail.com&quot; e senha &quot;1234&quot;" time="0.003"/>
+  <testcase classname="Cenario: login com sucesso" name="Dado que eu informe informe usuário &quot;qazando@gmail.com&quot; e senha &quot;1234&quot;" time="0.006"/>
   <testcase classname="Cenario: login com sucesso" name="Quando eu clicar no botão logar" time="0"/>
   <testcase classname="Cenario: login com sucesso" name="Entao vou visualizar a home do aplicativo" time="0"/>
-  <testcase classname="Cenario: login com sucesso" name="Cenario: login com sucesso" time="0"/>
+  <testcase classname="Cenario: login com sucesso" name="Cenario: login com sucesso" time="0.001"/>
   <testcase classname="| qazando@gmail.com | 1234 |" name="Dado que eu informe informe usuário &quot;qazando@gmail.com&quot; e senha &quot;1234&quot;" time="0"/>
   <testcase classname="| qazando@gmail.com | 1234 |" name="Quando eu clicar no botão logar" time="0"/>
   <testcase classname="| qazando@gmail.com | 1234 |" name="Entao vou visualizar a home do aplicativo" time="0"/>
