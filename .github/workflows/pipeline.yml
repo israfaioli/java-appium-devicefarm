@@ -12,7 +12,7 @@ on:
       device:
         description: 'Device platform to run tests on'
         required: true
-        default: 'android'
+        default: "android"
         type: string
 
 jobs:
@@ -40,7 +40,7 @@ jobs:
         run: mvn install -DskipTests
 
       - name: Debug Device Variable
-        run: echo ${{ github.event.inputs.device.default }}
+        run: echo ${{ github.event.inputs.device }}
 
 #      - name: Run tests
 #        env:
