@@ -10,6 +10,7 @@ Neste exemplo utilizamos como base as seguintes urls oficiais para que este proj
 - https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html
 - https://maven.apache.org/download.cgi
 - https://mvnrepository.com/
+- https://app-automate.browserstack.com/dashboard/v2/get-started#upload-app (link upload app devicefarm)
 
 ## 🤖 Antes de rodar os testes devemos ter os programas abaixo OK:
 * Android studio com um device criado caso seja testes locais
