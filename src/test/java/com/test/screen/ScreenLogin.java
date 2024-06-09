@@ -1,7 +1,6 @@
 package com.test.screen;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.iOSFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITBy;
 import org.openqa.selenium.remote.RemoteWebElement;
 

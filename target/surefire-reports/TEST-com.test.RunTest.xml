@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="com.test.RunTest" time="0.004" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="com.test.RunTest" time="0.005" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.10+8-LTS-162"/>
@@ -70,7 +70,7 @@
   <testcase classname="Cenario: login com sucesso" name="Dado que eu informe informe usuário &quot;qazando@gmail.com&quot; e senha &quot;1234&quot;" time="0.004"/>
   <testcase classname="Cenario: login com sucesso" name="Quando eu clicar no botão logar" time="0"/>
   <testcase classname="Cenario: login com sucesso" name="Entao vou visualizar a home do aplicativo" time="0"/>
-  <testcase classname="Cenario: login com sucesso" name="Cenario: login com sucesso" time="0"/>
+  <testcase classname="Cenario: login com sucesso" name="Cenario: login com sucesso" time="0.001"/>
   <testcase classname="| qazando@gmail.com | 1234 |" name="Dado que eu informe informe usuário &quot;qazando@gmail.com&quot; e senha &quot;1234&quot;" time="0"/>
   <testcase classname="| qazando@gmail.com | 1234 |" name="Quando eu clicar no botão logar" time="0"/>
   <testcase classname="| qazando@gmail.com | 1234 |" name="Entao vou visualizar a home do aplicativo" time="0"/>
