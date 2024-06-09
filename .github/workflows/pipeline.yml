@@ -12,7 +12,7 @@ on:
       device:
         description: 'Device platform to run tests on'
         required: true
-        default: 'android'
+        default: "android"
         type: string
 
 jobs:
