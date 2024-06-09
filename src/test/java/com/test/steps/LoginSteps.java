@@ -13,6 +13,7 @@ public class LoginSteps {
 
     @Dado("^que eu informe informe usuário \"([^\"]*)\" e senha \"([^\"]*)\"$")
     public void que_eu_informe_informe_usuário_e_senha(String email, String senha) {
+        screenLogin.writeEmail(email);
         screenLogin.writePassword(senha);
     }
 
