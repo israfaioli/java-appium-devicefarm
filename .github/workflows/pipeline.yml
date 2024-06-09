@@ -40,12 +40,12 @@ jobs:
         run: mvn install -DskipTests
 
       - name: Debug Device Variable
-        run: echo `${{ github.event.inputs.device }}`
+        run: echo ${{ github.event.inputs.device }}
 
       - name: Run tests
         env:
           BROWSERSTACK_KEY: ${{ secrets.BROWSERSTACK_KEY }}
-        run: mvn test -Dexecucao=devicefarm -Ddispositivo=${{ github.event.inputs.device }}
+        run: mvn test -Dexecucao=devicefarm -Ddispositivo=${{ github.event.inputs.device || 'android' }}"
 
       - name: Generate report
         run: mvn cluecumber-report:reporting
