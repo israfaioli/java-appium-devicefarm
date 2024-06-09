@@ -40,7 +40,7 @@ jobs:
         run: mvn install -DskipTests
 
       - name: Debug Device Variable
-        run: echo ${{ github.event.inputs.device }}
+        run: echo ${{ github.event.inputs.device.default }}
 
 #      - name: Run tests
 #        env:
