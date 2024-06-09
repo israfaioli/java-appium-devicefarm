@@ -2,6 +2,7 @@ image: docker.io/qazando/appium-maven
 
 stages:          # List of stages for jobs, and their order of execution
   - test
+  - report
   - upload
 
 variables:
@@ -16,12 +17,20 @@ test-job:       # This job runs in the build stage, which runs first.
     paths:
       - target/formated-report
 
+report-job:       # This job runs in the build stage, which runs first.
+  stage: generate
+  dependencies:
+    - test-job
+  script:
+    - echo "Uploading artifact..."
+    -
 upload-report-job:       # This job runs in the build stage, which runs first.
   stage: upload
   dependencies:
     - test-job
   script:
-    - echo "Uploading artifact..."
+    - echo "Generating artifact..."
+    - mvn cluecumber-report:reporting
   artifacts:
     paths:
       - target/formated-report

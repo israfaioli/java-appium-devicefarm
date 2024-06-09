@@ -36,3 +36,6 @@ jobs:
         env:
           BROWSERSTACK_KEY: ${{ secrets.BROWSERSTACK_KEY }}
         run: mvn test -Dexecucao=devicefarm -Ddispositivo=android
+
+      - name: Generate report
+        run: mvn cluecumber-report:reporting
